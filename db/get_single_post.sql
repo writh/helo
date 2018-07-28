@@ -1,1 +1,1 @@
-select * from post INNER JOIN users on post.user_id  =users.id WHERE post_id =$1
+select * from post WHERE id =$1

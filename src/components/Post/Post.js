@@ -3,13 +3,20 @@ import axios from 'axios'
 
 class Post extends Component{
     constructor(props){
-        super()
+        super(props)
         this.state = {
-            post: {}
+            post: {
+                title: '',
+                username:'',
+                profile_pic: '',
+                image_url: '',
+
+            }
         }
     }
     componentWillMount(){
         axios.get(`/api/post/${this.props.match.params.postid}`).then(response=>{
+            console.log(response.data, 'inside post.js')
             this.setState({post: response.data[0]})
         })
     }
@@ -21,7 +28,7 @@ class Post extends Component{
                 <h1 className='title'>{this.state.post.title}</h1>
                 <div className='post-user'>
                     <p>by {this.state.post.username}</p>
-                    <img src={this.state.post.profile_picture} alt="profile-image" className='profile-thumbnail'/>
+                    <img src={this.state.post.profile_pic} alt="profile-image" className='profile-thumbnail'/>
                 </div>
                 </div>
                 <div className='post-content'>

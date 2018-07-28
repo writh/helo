@@ -18,7 +18,7 @@ export default function reducer(state = initialState, action){
         return Object.assign({}, state, {username: action.payload.username, password: action.payload.password, profile_pic: action.payload.profile_pic})
         
         case GET_INFO:
-        return Object.assign({}, state, {username: action.payload.username, profile_pic:action.payload.profile_picture})
+        return Object.assign({}, state, {username: action.payload.username, profile_pic:action.payload.profile_pic})
 
         case LOGOUT:
         return Object.assign({}, state, {username: action.payload.username, password: action.payload.password, profile_pic: action.payload.profile_pic})

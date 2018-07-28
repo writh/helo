@@ -3,5 +3,5 @@ CREATE TABLE post(
     title VARCHAR(45),
     img TEXT,
     content TEXT,
-    user_id INTEGER REFERENCES users (id)
+    user_id INTEGER REFERENCES "users" (id)
 );

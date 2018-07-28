@@ -53,8 +53,9 @@ class Dashboard extends Component {
 	}
 	render() {
 		const posts = this.state.posts.map((post, index) => {
+			console.log('dashboard post', post)
 			return (
-				<Link key={index} to={`post/${post.post_id}`}>
+				<Link key={index} to={`post/${post.id}`}>
 					<div className="post_summary">
 						<h3>{post.title}</h3>
 						<div className="post-user">
