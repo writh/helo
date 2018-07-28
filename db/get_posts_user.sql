@@ -1,0 +1,1 @@
+select * from post INNER JOIN users on post.user_id  =users.id Where user_id <> $1

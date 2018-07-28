@@ -1,0 +1,1 @@
+select * from post INNER JOIN users on post.user_id  =users.id Where title LIKE $1 and user_id <> $2

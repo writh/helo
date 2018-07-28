@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Route} from 'react-router-dom'
 import './App.css';
-import Nav from './component/Nav/Nav';
-import Auth from './component/Auth/Auth';
-import Dashboard from './component/Dashboard/Dashboard';
-import Form from './component/Form/Form';
-import Post from './component/Post/Post';
-import Routes from "./routes"
-import {Switch, Route} from 'react-router-dom'
+import Nav from './components/Nav/Nav'
+import Routes from './route'
 
 class App extends Component {
+  constructor(props){
+    super(props)
+  }
   render() {
+// const nav = this.props.location.pathname === '/' ? "" : 
     return (
       <div className="App">
-        <Route component={Nav} />
-        <Routes/>
+
+    <Route component={Nav} />
+    <Routes/>
       </div>
     );
   }

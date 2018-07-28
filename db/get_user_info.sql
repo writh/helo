@@ -1,0 +1,1 @@
+SELECT username, profile_pic from users WHERE id = $1
